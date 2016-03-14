@@ -7,5 +7,5 @@ from datetime import datetime
 import hashlib
 
 def index(request):
-    render(request, 'index.html')
+    return render(request, 'index.html')
 
