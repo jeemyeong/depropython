@@ -6,6 +6,6 @@ from django.core.urlresolvers import reverse
 from datetime import datetime
 import hashlib
 
-def index(request):
-    return render(request, 'index.html')
 
+def home(request):
+    return render(request, 'index.html')
