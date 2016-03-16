@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from .views import home
+from .views import home, mail
 
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', home, name="home"),
     url(r'^portfolio/', include('portfolio.urls', namespace='portfolio')),
+    url(r'^send_mail$', mail, name="sendMail"),
 ]
