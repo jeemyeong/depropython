@@ -44,6 +44,7 @@ def post(request):
                     self.result.append(value)
 
     parser = ImageParser()
+    
     try:
         parser.feed(content)
         cnt = 0
