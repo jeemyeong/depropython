@@ -8,7 +8,7 @@ from django.core.urlresolvers import reverse
 from datetime import datetime
 import hashlib
 from .models import board, category, imghandler
-import HTMLParser
+from HTMLParser import HTMLParser
 
 
 # Create your views here.
@@ -44,7 +44,7 @@ def post(request):
                     self.result.append(value)
 
     parser = ImageParser()
-    
+
     try:
         parser.feed(content)
         cnt = 0

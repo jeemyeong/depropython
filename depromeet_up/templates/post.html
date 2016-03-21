@@ -2,25 +2,23 @@
 <html lang="en">
 
 <head>
-
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <script type="text/javascript" src="{% static 'js/jquery.js'%}"></script>
     <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
     <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
 
+    <script type="text/javascript" src="{% static 'js/jquery.fileupload.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.validate.js'%}"></script>
 </head>
 <body>
     <!-- page contents location. -->
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $("#{{category}}").attr("selected","");
-        })
-    </script>
+
     <div class="container">
         <form class="form-inline" action="/portfolio/write/post" method="post">{% csrf_token %}
             <div>
